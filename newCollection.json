@@ -1,0 +1,280 @@
+[
+    {
+        "_id": "6364e18e65d44c1100000006",
+        "name": "JSObject1",
+        "pageId": "User Management",
+        "organizationId": "Org",
+        "body": "export default {\n\teditUserRole: async () => {\n\t\tawait editUserRole.run();\n\t\tcloseModal('ModalEditRole');\n\t\tgetUsers.run();\n\t},\n\tcreateUser: async () => {\n\t\tawait createUser.run();\n\t\tcloseModal('ModalCreateUser');\n\t\tgetUsers.run();\n\t}\n}",
+        "variables": [],
+        "actions": [
+            {
+                "_id": "6364e18ec2e17400119dc7f1",
+                "name": "editUserRole",
+                "pageId": "User Management",
+                "organizationId": "Org",
+                "executeOnLoad": false,
+                "actionConfiguration": {
+                    "body": "async () => {\n\t\tawait editUserRole.run();\n\t\tcloseModal('ModalEditRole');\n\t\tgetUsers.run();\n\t}",
+                    "isAsync": true,
+                    "timeoutInMillisecond": 10000,
+                    "jsArguments": [],
+                    "paginationType": "NONE",
+                    "encodeParamsToggle": true
+                },
+                "clientSideExecution": true,
+                "collectionId": "6364e18e65d44c1100000006",
+                "applicationId": "jetsondashboard",
+                "datasource": {
+                    "isValid": true,
+                    "messages": [],
+                    "name": "UNUSED_DATASOURCE",
+                    "new": true,
+                    "organizationId": "Org",
+                    "pluginId": "",
+                    "userPermissions": []
+                },
+                "dynamicBindingPathList": [
+                    {
+                        "key": "body"
+                    }
+                ],
+                "fullyQualifiedName": "JSObject1.myFun2",
+                "isValid": true,
+                "jsonPathKeys": [
+                    "async () => {\n\t\t//use async-await or promises\n\t}"
+                ],
+                "pluginType": "JS",
+                "id": "6364e18ec2e17400119dc7f1"
+            },
+            {
+                "name": "createUser",
+                "collectionId": "6364e18e65d44c1100000006",
+                "executeOnLoad": false,
+                "pageId": "User Management",
+                "organizationId": "Org",
+                "actionConfiguration": {
+                    "body": "async () => {\n\t\tawait createUser.run();\n\t\tcloseModal('ModalCreateUser');\n\t\tgetUsers.run();\n\t}",
+                    "isAsync": true,
+                    "timeoutInMillisecond": 0,
+                    "jsArguments": []
+                }
+            }
+        ],
+        "applicationId": "jetsondashboard",
+        "pluginType": "JS",
+        "id": "6364e18e65d44c1100000006",
+        "actionIds": [],
+        "archivedActionIds": [],
+        "archivedActions": [],
+        "pluginId": "JS",
+        "workspaceId": "Org"
+    },
+    {
+        "name": "productsList",
+        "pageId": "Catalog",
+        "body": "export default {\n\tclearStore: ()=>{\n\t\tstoreValue('total', {}, false);\n\t\tstoreValue(\"totalPrice\", undefined, false);\n\t},\n\t increment: (id) => {\n    let totalCurrent = main.store.total ?? {};\n    totalCurrent[id] = (totalCurrent[id] || 1) + 1;\n    storeValue('total', totalCurrent, false);\n  },\n  decrement: (id) => {\n    let totalCurrent = main.store.total ?? {};\n    totalCurrent[id] = Math.max((totalCurrent[id] || 1) - 1, 1);\n    storeValue('total', totalCurrent, false);\n  },\n\taddToCart: (index) => {\n\t\tlet item = getProducts.data[index];\n\t\tlet cart = main.store?.cart ?? [];\n\n\t\tif (cart.some((e) => e.id == item.id)) {\n\t\t\tconst updatedCart = cart.map((existingItem) => {\n\t\t\t\tif (existingItem.id === item.id) {\n\t\t\t\t\treturn {\n\t\t\t\t\t\t...existingItem,\n\t\t\t\t\t\ttotal: existingItem.total + (main.store.total[item.id] ?? 1),\n\t\t\t\t\t};\n\t\t\t\t}\n\t\t\t\treturn existingItem;\n\t\t\t});\n\t\t\tstoreValue(\"cart\", updatedCart, false);\n\t\t} else {\n\t\t\tcart.push({\n\t\t\t\tid: item.id,\n\t\t\t\tname: item.name,\n\t\t\t\tprice: item.price,\n\t\t\t\tunit: item.unit,\n\t\t\t\ttotal: main.store.total[item.id] ?? 1,\n\t\t\t});\n\t\t\tstoreValue(\"cart\", cart, false);\n\t\t}\n\t},\n\tcountTotalPrice:()=>{\n\t\tlet totalPrice = 0\n\t\tmain.store.cart.forEach(e=> {\n\t\t\tlet itemPrice = +e.price * e.total\n\t\t\ttotalPrice = totalPrice + itemPrice\n\t\t})\n\t\tstoreValue(\"totalPrice\", totalPrice, false)\n\t}\n}",
+        "variables": [],
+        "actions": [
+            {
+                "name": "increment",
+                "collectionId": "64ad07bc5355b4b7e760a752",
+                "executeOnLoad": false,
+                "pageId": "Catalog",
+                "actionConfiguration": {
+                    "body": "(id) => {\n    let totalCurrent = main.store.total ?? {};\n    totalCurrent[id] = (totalCurrent[id] || 1) + 1;\n    storeValue('total', totalCurrent, false);\n  }",
+                    "isAsync": true,
+                    "timeoutInMillisecond": 10000,
+                    "jsArguments": [
+                        {
+                            "name": "id"
+                        }
+                    ],
+                    "paginationType": "NONE",
+                    "encodeParamsToggle": true
+                },
+                "_id": "65bba5241d96485c661ccd64",
+                "id": "65bba5241d96485c661ccd64",
+                "applicationId": "jetsondashboard",
+                "datasource": {
+                    "isValid": true,
+                    "messages": [],
+                    "name": "UNUSED_DATASOURCE",
+                    "new": true,
+                    "pluginId": "",
+                    "userPermissions": []
+                },
+                "dynamicBindingPathList": [
+                    {
+                        "key": "body"
+                    }
+                ],
+                "fullyQualifiedName": "productsList.increment",
+                "isValid": true,
+                "jsonPathKeys": [
+                    "(value) => va"
+                ],
+                "pluginType": "JS"
+            },
+            {
+                "name": "decrement",
+                "collectionId": "64ad07bc5355b4b7e760a752",
+                "executeOnLoad": false,
+                "pageId": "Catalog",
+                "actionConfiguration": {
+                    "body": "(id) => {\n    let totalCurrent = main.store.total ?? {};\n    totalCurrent[id] = Math.max((totalCurrent[id] || 1) - 1, 1);\n    storeValue('total', totalCurrent, false);\n  }",
+                    "isAsync": true,
+                    "timeoutInMillisecond": 10000,
+                    "jsArguments": [
+                        {
+                            "name": "id"
+                        }
+                    ],
+                    "paginationType": "NONE",
+                    "encodeParamsToggle": true
+                },
+                "_id": "65bba58c1d96485c661ccd65",
+                "id": "65bba58c1d96485c661ccd65",
+                "applicationId": "jetsondashboard",
+                "datasource": {
+                    "isValid": true,
+                    "messages": [],
+                    "name": "UNUSED_DATASOURCE",
+                    "new": true,
+                    "pluginId": "",
+                    "userPermissions": []
+                },
+                "dynamicBindingPathList": [
+                    {
+                        "key": "body"
+                    }
+                ],
+                "fullyQualifiedName": "productsList.decrement",
+                "isValid": true,
+                "jsonPathKeys": [
+                    "(value) => +value + 1"
+                ],
+                "pluginType": "JS"
+            },
+            {
+                "name": "clearStore",
+                "collectionId": "64ad07bc5355b4b7e760a752",
+                "executeOnLoad": true,
+                "pageId": "Catalog",
+                "actionConfiguration": {
+                    "body": "()=>{\n\t\tstoreValue('total', {}, false);\n\t\tstoreValue(\"totalPrice\", undefined, false);\n\t}",
+                    "isAsync": true,
+                    "timeoutInMillisecond": 10000,
+                    "jsArguments": [],
+                    "paginationType": "NONE",
+                    "encodeParamsToggle": true
+                },
+                "_id": "65bbaa541d96485c661ccd66",
+                "id": "65bbaa541d96485c661ccd66",
+                "applicationId": "jetsondashboard",
+                "datasource": {
+                    "isValid": true,
+                    "messages": [],
+                    "name": "UNUSED_DATASOURCE",
+                    "new": true,
+                    "pluginId": "",
+                    "userPermissions": []
+                },
+                "dynamicBindingPathList": [
+                    {
+                        "key": "body"
+                    }
+                ],
+                "fullyQualifiedName": "productsList.clearStore",
+                "isValid": true,
+                "jsonPathKeys": [
+                    "()=>{\n\t\t   storeValue('total', undefined, false);\n\n\t}"
+                ],
+                "pluginType": "JS"
+            },
+            {
+                "name": "addToCart",
+                "collectionId": "64ad07bc5355b4b7e760a752",
+                "executeOnLoad": false,
+                "pageId": "Catalog",
+                "actionConfiguration": {
+                    "body": "(index) => {\n\t\tlet item = getProducts.data[index];\n\t\tlet cart = main.store?.cart ?? [];\n\n\t\tif (cart.some((e) => e.id == item.id)) {\n\t\t\tconst updatedCart = cart.map((existingItem) => {\n\t\t\t\tif (existingItem.id === item.id) {\n\t\t\t\t\treturn {\n\t\t\t\t\t\t...existingItem,\n\t\t\t\t\t\ttotal: existingItem.total + (main.store.total[item.id] ?? 1),\n\t\t\t\t\t};\n\t\t\t\t}\n\t\t\t\treturn existingItem;\n\t\t\t});\n\t\t\tstoreValue(\"cart\", updatedCart, false);\n\t\t} else {\n\t\t\tcart.push({\n\t\t\t\tid: item.id,\n\t\t\t\tname: item.name,\n\t\t\t\tprice: item.price,\n\t\t\t\tunit: item.unit,\n\t\t\t\ttotal: main.store.total[item.id] ?? 1,\n\t\t\t});\n\t\t\tstoreValue(\"cart\", cart, false);\n\t\t}\n\t}",
+                    "isAsync": false,
+                    "timeoutInMillisecond": 10000,
+                    "jsArguments": [
+                        {
+                            "name": "index"
+                        }
+                    ],
+                    "paginationType": "NONE",
+                    "encodeParamsToggle": true
+                },
+                "_id": "65bbacb81d96485c661ccd67",
+                "id": "65bbacb81d96485c661ccd67",
+                "applicationId": "jetsondashboard",
+                "datasource": {
+                    "isValid": true,
+                    "messages": [],
+                    "name": "UNUSED_DATASOURCE",
+                    "new": true,
+                    "pluginId": "",
+                    "userPermissions": []
+                },
+                "dynamicBindingPathList": [
+                    {
+                        "key": "body"
+                    }
+                ],
+                "fullyQualifiedName": "productsList.addToCart",
+                "isValid": true,
+                "jsonPathKeys": [
+                    "()=>{\n\t\t\n\t}"
+                ],
+                "pluginType": "JS"
+            },
+            {
+                "name": "countTotalPrice",
+                "collectionId": "64ad07bc5355b4b7e760a752",
+                "executeOnLoad": false,
+                "pageId": "Catalog",
+                "actionConfiguration": {
+                    "body": "()=>{\n\t\tlet totalPrice = 0\n\t\tmain.store.cart.forEach(e=> {\n\t\t\tlet itemPrice = +e.price * e.total\n\t\t\ttotalPrice = totalPrice + itemPrice\n\t\t})\n\t\tstoreValue(\"totalPrice\", totalPrice, false)\n\t}",
+                    "isAsync": true,
+                    "timeoutInMillisecond": 10000,
+                    "jsArguments": [],
+                    "paginationType": "NONE",
+                    "encodeParamsToggle": true
+                },
+                "_id": "65bbc0a91d96485c661ccd68",
+                "id": "65bbc0a91d96485c661ccd68",
+                "applicationId": "jetsondashboard",
+                "datasource": {
+                    "isValid": true,
+                    "messages": [],
+                    "name": "UNUSED_DATASOURCE",
+                    "new": true,
+                    "pluginId": "",
+                    "userPermissions": []
+                },
+                "dynamicBindingPathList": [
+                    {
+                        "key": "body"
+                    }
+                ],
+                "fullyQualifiedName": "productsList.countTotalPrice",
+                "isValid": true,
+                "jsonPathKeys": [
+                    "()=>{\n\t\t\n\t}"
+                ],
+                "pluginType": "JS"
+            }
+        ],
+        "applicationId": "jetsondashboard",
+        "pluginType": "JS",
+        "_id": "64ad07bc5355b4b7e760a752",
+        "id": "64ad07bc5355b4b7e760a752",
+        "pluginId": "JS",
+        "actionIds": [],
+        "archivedActionIds": [],
+        "archivedActions": []
+    }
+]
