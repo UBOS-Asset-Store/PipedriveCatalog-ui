@@ -5547,7 +5547,7 @@
         "pluginType": "API",
         "pluginId": "API",
         "createdAt": "2022-08-29T14:49:08.307Z",
-        "updatedAt": "2024-02-01T17:53:27.108Z",
+        "updatedAt": "2024-02-12T10:35:36.656Z",
         "deleted": false,
         "policies": [
             {
@@ -7517,7 +7517,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2024-02-02T13:58:54.296Z",
-        "updatedAt": "2024-02-02T14:29:41.288Z",
+        "updatedAt": "2024-02-09T14:07:23.147Z",
         "deleted": false,
         "policies": [
             {
@@ -7642,6 +7642,88 @@
         },
         "createdAt": "2024-02-02T16:36:32.817Z",
         "updatedAt": "2024-02-02T16:36:38.172Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "65c63195017c4c87e9bfa4c9",
+        "applicationId": "jetsondashboard",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "setEnvs",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.nodeUrl}}/setEnvs"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "Config",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "body": "{\n    \"DRIVE_URL\": \"{{Drive_Url_Input.text}}\",\n    \"DRIVE_API_TOKEN\": \"{{Drive_Api_Key_Input.text}}\"\n}"
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.nodeUrl",
+                "Drive_Url_Input.text",
+                "Drive_Api_Key_Input.",
+                "Drive_Api_Key_Input.text"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2024-02-09T14:07:17.814Z",
+        "updatedAt": "2024-02-09T14:13:58.555Z",
         "deleted": false,
         "policies": [
             {

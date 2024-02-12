@@ -8701,8 +8701,8 @@
                                                                 "isLoading": false,
                                                                 "leftColumn": 0,
                                                                 "rightColumn": 18,
-                                                                "topRow": 35,
-                                                                "bottomRow": 40,
+                                                                "topRow": 36,
+                                                                "bottomRow": 41,
                                                                 "parentId": "ftgmteqk96",
                                                                 "onClick": "{{closeModal('ModalAddModule')}}",
                                                                 "dynamicBindingPathList": [],
@@ -8866,7 +8866,7 @@
                                                         "leftColumn": 0,
                                                         "rightColumn": 344.25,
                                                         "topRow": 0,
-                                                        "bottomRow": 420,
+                                                        "bottomRow": 430,
                                                         "parentId": "370xf50sod"
                                                     }
                                                 ],
@@ -14077,9 +14077,6 @@
                                                                         "key": "primaryColumns.products.computedValue"
                                                                     },
                                                                     {
-                                                                        "key": "primaryColumns.shopping.computedValue"
-                                                                    },
-                                                                    {
                                                                         "key": "primaryColumns.createdAt.computedValue"
                                                                     },
                                                                     {
@@ -14229,23 +14226,6 @@
                                                                         "label": "products",
                                                                         "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.products))}}"
                                                                     },
-                                                                    "shopping": {
-                                                                        "index": 9,
-                                                                        "width": 150,
-                                                                        "id": "shopping",
-                                                                        "horizontalAlignment": "LEFT",
-                                                                        "verticalAlignment": "CENTER",
-                                                                        "columnType": "text",
-                                                                        "textSize": "PARAGRAPH",
-                                                                        "enableFilter": true,
-                                                                        "enableSort": true,
-                                                                        "isVisible": false,
-                                                                        "isDisabled": false,
-                                                                        "isCellVisible": true,
-                                                                        "isDerived": false,
-                                                                        "label": "shopping",
-                                                                        "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.shopping))}}"
-                                                                    },
                                                                     "createdAt": {
                                                                         "index": 10,
                                                                         "width": 150,
@@ -14345,9 +14325,8 @@
                                                                     "comment",
                                                                     "products",
                                                                     "totalPrice",
-                                                                    "shopping",
-                                                                    "createdAt",
                                                                     "shipping",
+                                                                    "createdAt",
                                                                     "customColumn1"
                                                                 ],
                                                                 "enableClientSideSearch": true,
@@ -15466,6 +15445,414 @@
         },
         "createdAt": "2023-07-14T09:37:40.681Z",
         "updatedAt": "2023-07-14T09:37:40.681Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:pages",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:pages",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "_id": "65c4eedc017c4c87e9bfa4c7",
+        "applicationId": "jetsondashboard",
+        "slug": "Config",
+        "Page": {
+            "name": "Config",
+            "layouts": [
+                {
+                    "_id": "65c4eedc017c4c87e9bfa4c8",
+                    "viewMode": false,
+                    "dsl": {
+                        "widgetName": "MainContainer",
+                        "backgroundColor": "none",
+                        "rightColumn": 1224,
+                        "snapColumns": 64,
+                        "widgetId": "0",
+                        "topRow": 0,
+                        "bottomRow": 1020,
+                        "parentRowSpace": 1,
+                        "type": "CANVAS_WIDGET",
+                        "detachFromLayout": true,
+                        "minHeight": 770,
+                        "dynamicBindingPathList": [],
+                        "parentColumnSpace": 1,
+                        "leftColumn": 0,
+                        "children": [
+                            {
+                                "isVisible": true,
+                                "backgroundColor": "",
+                                "widgetName": "Container12",
+                                "containerStyle": "card",
+                                "borderColor": "",
+                                "borderWidth": "0",
+                                "borderRadius": "0",
+                                "boxShadow": "NONE",
+                                "animateLoading": true,
+                                "children": [
+                                    {
+                                        "isVisible": true,
+                                        "widgetName": "Canvas26",
+                                        "version": 1,
+                                        "detachFromLayout": true,
+                                        "type": "CANVAS_WIDGET",
+                                        "hideCard": true,
+                                        "displayName": "Canvas",
+                                        "key": "ztg103vwwf",
+                                        "containerStyle": "none",
+                                        "canExtend": false,
+                                        "children": [
+                                            {
+                                                "isVisible": true,
+                                                "text": "PipeDrive Config",
+                                                "fontSize": "HEADING1",
+                                                "fontStyle": "BOLD",
+                                                "textAlign": "LEFT",
+                                                "textColor": "{{main.env.mainDark}}",
+                                                "truncateButtonColor": "#FFC13D",
+                                                "widgetName": "Text2Copy",
+                                                "shouldTruncate": false,
+                                                "overflow": "NONE",
+                                                "version": 1,
+                                                "animateLoading": true,
+                                                "type": "TEXT_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Text",
+                                                "key": "69635pyplv",
+                                                "iconSVG": "/static/media/icon.97c59b52.svg",
+                                                "widgetId": "9t45aoukds",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "parentColumnSpace": 12.458984375,
+                                                "parentRowSpace": 10,
+                                                "leftColumn": 0,
+                                                "rightColumn": 55,
+                                                "topRow": 0,
+                                                "bottomRow": 7,
+                                                "parentId": "xax3bm4s5v",
+                                                "dynamicBindingPathList": [
+                                                    {
+                                                        "key": "textColor"
+                                                    }
+                                                ],
+                                                "dynamicTriggerPathList": [],
+                                                "dynamicPropertyPathList": [
+                                                    {
+                                                        "key": "textColor"
+                                                    }
+                                                ],
+                                                "classStyle": "pageTitle"
+                                            },
+                                            {
+                                                "isVisible": true,
+                                                "backgroundColor": "#FFFFFF",
+                                                "widgetName": "Container13Copy",
+                                                "containerStyle": "card",
+                                                "borderColor": "transparent",
+                                                "borderWidth": "0",
+                                                "borderRadius": "24",
+                                                "boxShadow": "NONE",
+                                                "animateLoading": true,
+                                                "children": [
+                                                    {
+                                                        "isVisible": true,
+                                                        "widgetName": "Canvas29Copy",
+                                                        "version": 1,
+                                                        "detachFromLayout": true,
+                                                        "type": "CANVAS_WIDGET",
+                                                        "hideCard": true,
+                                                        "displayName": "Canvas",
+                                                        "key": "ztg103vwwf",
+                                                        "containerStyle": "none",
+                                                        "canExtend": false,
+                                                        "children": [
+                                                            {
+                                                                "isVisible": true,
+                                                                "label": "PipeDrive Api Key",
+                                                                "labelPosition": "Top",
+                                                                "labelAlignment": "left",
+                                                                "labelWidth": 5,
+                                                                "widgetName": "Drive_Api_Key_Input",
+                                                                "version": 2,
+                                                                "defaultText": "",
+                                                                "iconAlign": "left",
+                                                                "autoFocus": false,
+                                                                "labelStyle": "",
+                                                                "resetOnSubmit": true,
+                                                                "isRequired": false,
+                                                                "isDisabled": false,
+                                                                "animateLoading": true,
+                                                                "classStyle": "",
+                                                                "inputType": "PASSWORD",
+                                                                "buttonPosition": "right",
+                                                                "type": "INPUT_WIDGET_V2",
+                                                                "hideCard": false,
+                                                                "displayName": "Input",
+                                                                "key": "izke2g1027",
+                                                                "iconSVG": "/static/media/icon.9f505595.svg",
+                                                                "widgetId": "u8mdm91mra",
+                                                                "renderMode": "CANVAS",
+                                                                "isLoading": false,
+                                                                "parentColumnSpace": 4.45172119140625,
+                                                                "parentRowSpace": 10,
+                                                                "leftColumn": 0,
+                                                                "rightColumn": 64,
+                                                                "topRow": 13,
+                                                                "bottomRow": 20,
+                                                                "parentId": "0iq9cu1e1g",
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "labelTextColor"
+                                                                    }
+                                                                ],
+                                                                "dynamicTriggerPathList": [],
+                                                                "labelTextColor": "{{main.env.mediumGray}}",
+                                                                "dynamicPropertyPathList": [
+                                                                    {
+                                                                        "key": "labelTextColor"
+                                                                    }
+                                                                ],
+                                                                "placeholderText": "532320dsafsd29234035851f93f54fc332d399a48"
+                                                            },
+                                                            {
+                                                                "isVisible": true,
+                                                                "label": "PipeDrive URL",
+                                                                "labelPosition": "Top",
+                                                                "labelAlignment": "left",
+                                                                "labelWidth": 5,
+                                                                "widgetName": "Drive_Url_Input",
+                                                                "version": 2,
+                                                                "defaultText": "",
+                                                                "iconAlign": "left",
+                                                                "autoFocus": false,
+                                                                "labelStyle": "",
+                                                                "resetOnSubmit": true,
+                                                                "isRequired": false,
+                                                                "isDisabled": false,
+                                                                "animateLoading": true,
+                                                                "classStyle": "",
+                                                                "inputType": "TEXT",
+                                                                "buttonPosition": "right",
+                                                                "type": "INPUT_WIDGET_V2",
+                                                                "hideCard": false,
+                                                                "displayName": "Input",
+                                                                "key": "izke2g1027",
+                                                                "iconSVG": "/static/media/icon.9f505595.svg",
+                                                                "widgetId": "n1hlr9u67o",
+                                                                "renderMode": "CANVAS",
+                                                                "isLoading": false,
+                                                                "parentColumnSpace": 4.45172119140625,
+                                                                "parentRowSpace": 10,
+                                                                "leftColumn": 0,
+                                                                "rightColumn": 64,
+                                                                "topRow": 6,
+                                                                "bottomRow": 13,
+                                                                "parentId": "0iq9cu1e1g",
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "labelTextColor"
+                                                                    }
+                                                                ],
+                                                                "dynamicTriggerPathList": [],
+                                                                "labelTextColor": "{{main.env.mediumGray}}",
+                                                                "dynamicPropertyPathList": [
+                                                                    {
+                                                                        "key": "labelTextColor"
+                                                                    }
+                                                                ],
+                                                                "placeholderText": "https://api.pipedrive.com/v1"
+                                                            },
+                                                            {
+                                                                "isVisible": true,
+                                                                "text": "PipeDrive Info",
+                                                                "fontSize": "HEADING2",
+                                                                "fontStyle": "BOLD",
+                                                                "textAlign": "LEFT",
+                                                                "textColor": "{{main.env.mainDark}}",
+                                                                "truncateButtonColor": "#FFC13D",
+                                                                "widgetName": "Text12Copy",
+                                                                "shouldTruncate": false,
+                                                                "overflow": "NONE",
+                                                                "version": 1,
+                                                                "animateLoading": true,
+                                                                "type": "TEXT_WIDGET",
+                                                                "hideCard": false,
+                                                                "displayName": "Text",
+                                                                "key": "tzrqoye80a",
+                                                                "iconSVG": "/static/media/icon.97c59b52.svg",
+                                                                "widgetId": "bk1rbini8i",
+                                                                "renderMode": "CANVAS",
+                                                                "isLoading": false,
+                                                                "parentColumnSpace": 4.45172119140625,
+                                                                "parentRowSpace": 10,
+                                                                "leftColumn": 0,
+                                                                "rightColumn": 64,
+                                                                "topRow": 1,
+                                                                "bottomRow": 5,
+                                                                "parentId": "0iq9cu1e1g",
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "textColor"
+                                                                    }
+                                                                ],
+                                                                "dynamicTriggerPathList": [],
+                                                                "dynamicPropertyPathList": [
+                                                                    {
+                                                                        "key": "textColor"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "isVisible": true,
+                                                                "animateLoading": true,
+                                                                "text": "Confirm",
+                                                                "buttonColor": "{{main.env.primaryColor}}",
+                                                                "buttonVariant": "PRIMARY",
+                                                                "placement": "CENTER",
+                                                                "widgetName": "Button1Copy",
+                                                                "isDisabled": false,
+                                                                "isDefaultClickDisabled": true,
+                                                                "recaptchaType": "V3",
+                                                                "version": 1,
+                                                                "classStyle": "",
+                                                                "type": "BUTTON_WIDGET",
+                                                                "hideCard": false,
+                                                                "displayName": "Button",
+                                                                "key": "iy3bu1z40k",
+                                                                "iconSVG": "/static/media/icon.cca02633.svg",
+                                                                "widgetId": "b92t9kshq0",
+                                                                "renderMode": "CANVAS",
+                                                                "isLoading": false,
+                                                                "parentColumnSpace": 15.2646484375,
+                                                                "parentRowSpace": 10,
+                                                                "leftColumn": 48,
+                                                                "rightColumn": 64,
+                                                                "topRow": 42,
+                                                                "bottomRow": 46,
+                                                                "parentId": "0iq9cu1e1g",
+                                                                "borderRadius": "ROUNDED",
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "buttonColor"
+                                                                    }
+                                                                ],
+                                                                "dynamicTriggerPathList": [
+                                                                    {
+                                                                        "key": "onClick"
+                                                                    }
+                                                                ],
+                                                                "onClick": "{{setEnvs.run(() => showAlert('Config Updated','success'), () => showAlert('Error','error'))}}",
+                                                                "iconAlign": "left",
+                                                                "dynamicPropertyPathList": []
+                                                            }
+                                                        ],
+                                                        "minHeight": 400,
+                                                        "widgetId": "0iq9cu1e1g",
+                                                        "renderMode": "CANVAS",
+                                                        "isLoading": false,
+                                                        "parentColumnSpace": 1,
+                                                        "parentRowSpace": 1,
+                                                        "leftColumn": 0,
+                                                        "rightColumn": 304.91015625,
+                                                        "topRow": 0,
+                                                        "bottomRow": 480,
+                                                        "parentId": "r9ix3ra7fg"
+                                                    }
+                                                ],
+                                                "version": 1,
+                                                "classStyle": "",
+                                                "type": "CONTAINER_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Container",
+                                                "key": "uogsv4qe02",
+                                                "iconSVG": "/static/media/icon.1977dca3.svg",
+                                                "isCanvas": true,
+                                                "widgetId": "r9ix3ra7fg",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "parentColumnSpace": 12.70458984375,
+                                                "parentRowSpace": 10,
+                                                "leftColumn": 0,
+                                                "rightColumn": 64,
+                                                "topRow": 7,
+                                                "bottomRow": 60,
+                                                "parentId": "xax3bm4s5v",
+                                                "dynamicBindingPathList": [],
+                                                "dynamicTriggerPathList": []
+                                            }
+                                        ],
+                                        "minHeight": 400,
+                                        "widgetId": "xax3bm4s5v",
+                                        "renderMode": "CANVAS",
+                                        "isLoading": false,
+                                        "parentColumnSpace": 1,
+                                        "parentRowSpace": 1,
+                                        "leftColumn": 0,
+                                        "rightColumn": 377.25,
+                                        "topRow": 0,
+                                        "bottomRow": 620,
+                                        "parentId": "kbvrj8g4qb"
+                                    }
+                                ],
+                                "version": 1,
+                                "classStyle": "main-container",
+                                "type": "CONTAINER_WIDGET",
+                                "hideCard": false,
+                                "displayName": "Container",
+                                "key": "uogsv4qe02",
+                                "iconSVG": "/static/media/icon.1977dca3.svg",
+                                "isCanvas": true,
+                                "widgetId": "kbvrj8g4qb",
+                                "renderMode": "CANVAS",
+                                "isLoading": false,
+                                "parentColumnSpace": 15.71875,
+                                "parentRowSpace": 10,
+                                "leftColumn": 11,
+                                "rightColumn": 64,
+                                "topRow": 9,
+                                "bottomRow": 76,
+                                "parentId": "0",
+                                "dynamicBindingPathList": [],
+                                "dynamicTriggerPathList": [],
+                                "shouldScrollContents": false
+                            }
+                        ],
+                        "snapRows": 76,
+                        "containerStyle": "none",
+                        "canExtend": true,
+                        "version": 57
+                    },
+                    "widgetNames": [
+                        "MainContainer",
+                        "Container12",
+                        "Canvas26",
+                        "Text2Copy",
+                        "Container13Copy",
+                        "Canvas29Copy",
+                        "Drive_Api_Key_Input",
+                        "Drive_Url_Input",
+                        "Text12Copy",
+                        "Button1Copy"
+                    ],
+                    "deleted": false,
+                    "policies": [],
+                    "layoutOnLoadActions": [
+                        []
+                    ],
+                    "layoutOnCloseActions": [
+                        []
+                    ]
+                }
+            ]
+        },
+        "createdAt": "2024-02-08T15:10:20.108Z",
+        "updatedAt": "2024-02-08T15:10:20.108Z",
         "deleted": false,
         "policies": [
             {

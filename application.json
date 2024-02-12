@@ -59,6 +59,10 @@
         {
             "_id": "Orders History",
             "isDefault": false
+        },
+        {
+            "_id": "Config",
+            "isDefault": false
         }
     ],
     "policies": [
@@ -2422,7 +2426,7 @@
                                             "widgetName": "sidebarAccordion",
                                             "shouldScrollContents": false,
                                             "directionRtl": false,
-                                            "selectedValue": "{{main.URL.queryParams.pageName ? main.URL.queryParams.pageName : \"Dashboard\"}}",
+                                            "selectedValue": "{{main.URL.queryDrive_Api_Key_Inputarams.pageName ? main.URL.queryDrive_Api_Key_Inputarams.pageName : \"Dashboard\"}}",
                                             "array": "{{main.user.auth_module.user.menu}}",
                                             "classStyle": "menu",
                                             "type": "ACCORDION_WIDGET",
@@ -2670,7 +2674,7 @@
                                                 }
                                             ],
                                             "classStyle": "",
-                                            "onClick": "{{navigateTo('My Profile', {})}}"
+                                            "onClick": "{{navigateTo('My Drive_Api_Key_Inputrofile', {})}}"
                                         },
                                         {
                                             "isVisible": true,
@@ -2705,7 +2709,7 @@
                                                     "key": "onClick"
                                                 }
                                             ],
-                                            "onClick": "{{navigateTo('My Profile', {})}}"
+                                            "onClick": "{{navigateTo('My Drive_Api_Key_Inputrofile', {})}}"
                                         }
                                     ],
                                     "minHeight": 400,
@@ -2743,7 +2747,7 @@
                             "dynamicTriggerPathList": []
                         },
                         {
-                            "isVisible": "{{main.URL.fullPath.includes('Catalog')}}",
+                            "isVisible": "{{main.URL.fullDrive_Api_Key_Inputath.includes('Catalog')}}",
                             "iconName": "shopping-cart",
                             "borderRadius": "ROUNDED",
                             "boxShadow": "NONE",
@@ -2784,7 +2788,7 @@
                                     "key": "onClick"
                                 }
                             ],
-                            "onClick": "{{productsList.countTotalPrice(); showModal('cartModal')}}",
+                            "onClick": "{{productsList.countTotalDrive_Api_Key_Inputrice(); showModal('cartModal')}}",
                             "dynamicPropertyPathList": [
                                 {
                                     "key": "onClick"
@@ -2841,7 +2845,7 @@
                             ]
                         },
                         {
-                            "isVisible": "{{main.URL.fullPath.includes('Catalog')}}",
+                            "isVisible": "{{main.URL.fullDrive_Api_Key_Inputath.includes('Catalog')}}",
                             "text": "<span style='font-weight: 600; text-decoration: underline'>{{main.store.cart?.length || 0}}</span> Item in Cart",
                             "fontSize": "HEADING3",
                             "fontStyle": "",
