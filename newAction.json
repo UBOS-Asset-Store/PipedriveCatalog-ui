@@ -7184,7 +7184,7 @@
         "pageId": "Catalog",
         "actionConfiguration": {
             "body": "()=>{\n\t\tlet totalPrice = 0\n\t\tmain.store.cart.forEach(e=> {\n\t\t\tlet itemPrice = +e.price * e.total\n\t\t\ttotalPrice = totalPrice + itemPrice\n\t\t})\n\t\tstoreValue(\"totalPrice\", totalPrice, false)\n\t}",
-            "isAsync": true,
+            "isAsync": false,
             "timeoutInMillisecond": 10000,
             "jsArguments": [],
             "paginationType": "NONE",

@@ -10562,6 +10562,52 @@
                                                 "parentId": "jllsr0vgjy",
                                                 "dynamicBindingPathList": [],
                                                 "dynamicTriggerPathList": []
+                                            },
+                                            {
+                                                "isVisible": "{{main.URL.fullPath.includes('Catalog')}}",
+                                                "text": "<span style='font-weight: 600; text-decoration: underline'>{{main.store.cart?.length || 0}}</span> Item in Cart",
+                                                "fontSize": "HEADING3",
+                                                "fontStyle": "",
+                                                "textAlign": "RIGHT",
+                                                "textColor": "{{main.env.primaryColor}}",
+                                                "truncateButtonColor": "#FFC13D",
+                                                "widgetName": "itemInCartTextCopy",
+                                                "shouldTruncate": false,
+                                                "overflow": "NONE",
+                                                "version": 1,
+                                                "animateLoading": true,
+                                                "type": "TEXT_WIDGET",
+                                                "hideCard": false,
+                                                "displayName": "Text",
+                                                "key": "cmj4ebynsg",
+                                                "iconSVG": "/static/media/icon.97c59b52.svg",
+                                                "widgetId": "mxleyud9ae",
+                                                "renderMode": "CANVAS",
+                                                "isLoading": false,
+                                                "parentColumnSpace": 15.5771484375,
+                                                "parentRowSpace": 10,
+                                                "leftColumn": 24,
+                                                "rightColumn": 40,
+                                                "topRow": 0,
+                                                "bottomRow": 6,
+                                                "parentId": "jllsr0vgjy",
+                                                "dynamicBindingPathList": [
+                                                    {
+                                                        "key": "textColor"
+                                                    },
+                                                    {
+                                                        "key": "text"
+                                                    },
+                                                    {
+                                                        "key": "isVisible"
+                                                    }
+                                                ],
+                                                "dynamicTriggerPathList": [],
+                                                "dynamicPropertyPathList": [
+                                                    {
+                                                        "key": "isVisible"
+                                                    }
+                                                ]
                                             }
                                         ],
                                         "minHeight": 400,
@@ -13234,6 +13280,7 @@
                         "Container13",
                         "Canvas33",
                         "search",
+                        "itemInCartTextCopy",
                         "cartModal",
                         "Canvas25",
                         "IconButton2",

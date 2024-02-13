@@ -2747,7 +2747,7 @@
                             "dynamicTriggerPathList": []
                         },
                         {
-                            "isVisible": "{{main.URL.fullDrive_Api_Key_Inputath.includes('Catalog')}}",
+                            "isVisible": "{{main.URL.fullPath.includes('Catalog')}}",
                             "iconName": "shopping-cart",
                             "borderRadius": "ROUNDED",
                             "boxShadow": "NONE",
@@ -2845,7 +2845,7 @@
                             ]
                         },
                         {
-                            "isVisible": "{{main.URL.fullDrive_Api_Key_Inputath.includes('Catalog')}}",
+                            "isVisible": "{{main.URL.fullPath.includes('Catalog')}}",
                             "text": "<span style='font-weight: 600; text-decoration: underline'>{{main.store.cart?.length || 0}}</span> Item in Cart",
                             "fontSize": "HEADING3",
                             "fontStyle": "",
