@@ -13462,6 +13462,49 @@
                                                         "children": [
                                                             {
                                                                 "isVisible": true,
+                                                                "animateLoading": true,
+                                                                "text": "Update",
+                                                                "buttonColor": "{{main.env.primaryColor}}",
+                                                                "buttonVariant": "PRIMARY",
+                                                                "placement": "CENTER",
+                                                                "widgetName": "Button1Copy",
+                                                                "isDisabled": false,
+                                                                "isDefaultClickDisabled": true,
+                                                                "recaptchaType": "V3",
+                                                                "version": 1,
+                                                                "classStyle": "",
+                                                                "type": "BUTTON_WIDGET",
+                                                                "hideCard": false,
+                                                                "displayName": "Button",
+                                                                "key": "iy3bu1z40k",
+                                                                "iconSVG": "/static/media/icon.cca02633.svg",
+                                                                "widgetId": "n2rsq5nhth",
+                                                                "renderMode": "CANVAS",
+                                                                "isLoading": false,
+                                                                "parentColumnSpace": 15.2646484375,
+                                                                "parentRowSpace": 10,
+                                                                "leftColumn": 48,
+                                                                "rightColumn": 64,
+                                                                "topRow": 47,
+                                                                "bottomRow": 51,
+                                                                "parentId": "lz6lldyl7b",
+                                                                "borderRadius": "ROUNDED",
+                                                                "dynamicBindingPathList": [
+                                                                    {
+                                                                        "key": "buttonColor"
+                                                                    }
+                                                                ],
+                                                                "dynamicTriggerPathList": [
+                                                                    {
+                                                                        "key": "onClick"
+                                                                    }
+                                                                ],
+                                                                "onClick": "{{updateMyProfile.run(() => showAlert('Success','success'), () => {})}}",
+                                                                "iconName": "edit",
+                                                                "iconAlign": "left"
+                                                            },
+                                                            {
+                                                                "isVisible": true,
                                                                 "label": "Last Name",
                                                                 "labelPosition": "Top",
                                                                 "labelAlignment": "left",
@@ -13809,7 +13852,7 @@
                                                         "leftColumn": 0,
                                                         "rightColumn": 304.91015625,
                                                         "topRow": 0,
-                                                        "bottomRow": 480,
+                                                        "bottomRow": 530,
                                                         "parentId": "c809wc7byl"
                                                     }
                                                 ],
@@ -13883,6 +13926,7 @@
                         "Text2",
                         "Container13",
                         "Canvas29",
+                        "Button1Copy",
                         "lastName",
                         "firstName",
                         "phoneNumber",
